@@ -9,6 +9,7 @@ const hour = document.querySelector('[data-hours]');
 const minute = document.querySelector('[data-minutes]');
 const second = document.querySelector('[data-seconds]');
 let startTime = 0;
+let selectedTime = 0;
 
 startBtn.disabled = true;
 startBtn.addEventListener('click', onStart);
@@ -23,7 +24,7 @@ const options = {
 
     startTime = options.defaultDate.getTime();
     selectedTime = selectedDates[0].getTime();
-    deltaTime = selectedTime - startTime;
+    const deltaTime = selectedTime - startTime;
 
     if (deltaTime < 0) {
       Notify.failure('Please choose a date in the future', { timeout: 1000 });
@@ -77,4 +78,3 @@ function updateClockface({ days, hours, minutes, seconds }) {
   minute.textContent = `${minutes}`;
   second.textContent = `${seconds}`;
 }
-
