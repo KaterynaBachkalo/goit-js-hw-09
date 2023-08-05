@@ -12,7 +12,6 @@ form.addEventListener('submit', onSubmit);
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
-    console.log(shouldResolve);
     setTimeout(() => {
       if (shouldResolve) {
         resolve({ position, delay });
