@@ -8,6 +8,7 @@ const day = document.querySelector('[data-days]');
 const hour = document.querySelector('[data-hours]');
 const minute = document.querySelector('[data-minutes]');
 const second = document.querySelector('[data-seconds]');
+let startTime = 0;
 
 startBtn.disabled = true;
 startBtn.addEventListener('click', onStart);
