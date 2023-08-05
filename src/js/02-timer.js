@@ -77,3 +77,4 @@ function updateClockface({ days, hours, minutes, seconds }) {
   minute.textContent = `${minutes}`;
   second.textContent = `${seconds}`;
 }
+
